@@ -1,6 +1,6 @@
-// Java program to rotate a matrix by 90 degrees
-import java.io.*;
+package geekorama;
 
+// Java program to rotate a matrix by 90 degrees
 class RotateMatrix {
     static void rotateMatrix(int N, int mat[][]) {
         for (int x = 0; x < N / 2; x++)  {

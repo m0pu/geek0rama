@@ -1,24 +1,21 @@
-package geekogeek;
+package geekorama;
 
-/**
- * Powers of two between 1 and a given number.
- */
+// inspired from cracking the code interview.
 public class PowerOfTwo {
 
     public static void main(String[] args) {
-        powerOf2(8);
+        powerOf(11,3);
     }
 
-    public static int powerOf2(int power) {
-        if (power < 1) {
-            return 0;
-        }
-        if (power == 1) {
+    /**
+     * Displays all the power of values from 1 until a given value.
+     */
+    private static int powerOf(int limit, int powerOf) {
+        if (limit == 1) {
             return 1;
         }
-        System.out.println("---" + power);
-        final int previous = powerOf2(power / 2);
-        final int current = previous * 2;
+        final int previous = powerOf(limit / powerOf, powerOf);
+        final int current = previous * powerOf;
         System.out.println(current);
         return current;
     }
